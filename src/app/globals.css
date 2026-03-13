@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+:root {
+  --background: #030712;
+  --foreground: #f1f5f9;
+  --primary: #8b1a4a;
+  --primary-light: #e6007e;
+  --secondary: #1a5276;
+  --accent: #c9a84c;
+  --surface: #0c0f1a;
+  --surface-light: #1a1a2e;
+  --border: #2a1a35;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-surface: var(--surface);
+  --color-surface-light: var(--surface-light);
+  --color-border: var(--border);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2a1a35 #030712;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.glow-green {
+  box-shadow: 0 0 20px rgba(139, 26, 74, 0.3), 0 0 60px rgba(139, 26, 74, 0.1);
+}
+
+.glow-blue {
+  box-shadow: 0 0 20px rgba(26, 82, 118, 0.3), 0 0 60px rgba(26, 82, 118, 0.1);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 20px rgba(201, 168, 76, 0.3), 0 0 60px rgba(201, 168, 76, 0.1);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #e6007e, #c9a84c, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(139, 26, 74, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(139, 26, 74, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.border-gradient {
+  border: 1px solid transparent;
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  background-image:
+    linear-gradient(var(--surface), var(--surface)),
+    linear-gradient(135deg, #e6007e, #c9a84c, #3b82f6);
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes energy-flow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-pulse-slow { animation: pulse-slow 3s ease-in-out infinite; }
+.animate-float { animation: float 6s ease-in-out infinite; }
+.animate-energy-flow { background-size: 200% 200%; animation: energy-flow 3s ease infinite; }
+
+.particle-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
