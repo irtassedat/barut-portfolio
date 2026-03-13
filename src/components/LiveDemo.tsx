@@ -24,52 +24,48 @@ function useAnimatedNumber(target: number, duration: number = 2000) {
 }
 
 const plants = [
-  { name: "Zonguldak RES", type: "Rüzgâr", cap: "120 MW", status: "online" as const, eff: 78, color: "#3b82f6" },
-  { name: "Akıncı HES", type: "Hidro", cap: "85 MW", status: "online" as const, eff: 86, color: "#06b6d4" },
-  { name: "Tire RES", type: "Rüzgâr", cap: "50 MW", status: "warning" as const, eff: 62, color: "#3b82f6" },
-  { name: "Sapdağı RES", type: "Rüzgâr", cap: "48 MW", status: "online" as const, eff: 74, color: "#3b82f6" },
-  { name: "Gelibolu RES", type: "Rüzgâr", cap: "36 MW", status: "online" as const, eff: 71, color: "#3b82f6" },
-  { name: "JES-3", type: "Jeotermal", cap: "30 MW", status: "maintenance" as const, eff: 0, color: "#ef4444" },
-  { name: "Meryem RES", type: "Rüzgâr", cap: "30 MW", status: "online" as const, eff: 69, color: "#3b82f6" },
-  { name: "JES-1", type: "Jeotermal", cap: "24 MW", status: "online" as const, eff: 92, color: "#ef4444" },
-  { name: "JES-2", type: "Jeotermal", cap: "24 MW", status: "online" as const, eff: 89, color: "#ef4444" },
-  { name: "Angutlu HES", type: "Hidro", cap: "23 MW", status: "online" as const, eff: 81, color: "#06b6d4" },
-  { name: "Yenihisar RES", type: "Rüzgâr", cap: "20 MW", status: "online" as const, eff: 66, color: "#3b82f6" },
-  { name: "Demirci HES", type: "Hidro", cap: "13 MW", status: "online" as const, eff: 77, color: "#06b6d4" },
+  { name: "Barut Hemera", type: "5★ Ultra", cap: "420 oda", status: "online" as const, eff: 89, color: "#e6007e" },
+  { name: "Acanthus & Cennet", type: "5★ Premium", cap: "350 oda", status: "online" as const, eff: 86, color: "#e6007e" },
+  { name: "Barut Arum", type: "5★ Resort", cap: "310 oda", status: "online" as const, eff: 83, color: "#c9a84c" },
+  { name: "Barut Lara", type: "5★ Lara", cap: "380 oda", status: "online" as const, eff: 91, color: "#e6007e" },
+  { name: "Barut Kemer", type: "5★ Doğa", cap: "250 oda", status: "warning" as const, eff: 74, color: "#f59e0b" },
+  { name: "Barut Andiz", type: "5★ Boutique", cap: "180 oda", status: "online" as const, eff: 80, color: "#c9a84c" },
+  { name: "Barut B Suites", type: "Apart", cap: "120 oda", status: "online" as const, eff: 77, color: "#3b82f6" },
+  { name: "Barut Fethiye", type: "Yeni", cap: "200 oda", status: "maintenance" as const, eff: 0, color: "#06b6d4" },
 ];
 
 const alertsTr = [
-  { time: "14:32", type: "warning", msg: "Tire RES Türbin #3 — vibrasyon değeri eşik üstünde. Prediktif bakım: 12 gün içinde müdahale önerisi." },
-  { time: "14:28", type: "info", msg: "JES-1 Alaşehir — kuyu basıncı stabil, üretim %102 kapasite faktöründe. Optimum çalışıyor." },
-  { time: "14:15", type: "success", msg: "JES-3 Bakım Tamamlandı — türbin revizyonu bitiriliyor. Devreye alınma: 2 saat içinde." },
-  { time: "13:58", type: "warning", msg: "VEDAŞ Van Sektör 7 — trafo #142 aşırı yük. Pik taşıma önerisi: 18:00-22:00 arası yük dağıtımı." },
-  { time: "13:42", type: "info", msg: "Sivas YEKA — inşaat ilerleme: %12. İletim hattı güzergâhı onaylandı. Takvimde." },
-  { time: "13:30", type: "info", msg: "Cotiujeni (Moldova) — AB enerji fiyat analizi: satış optimizasyonu için 14:00-16:00 arası üretim artırması öneriliyor." },
-  { time: "13:15", type: "success", msg: "Haftalık ESG raporu otomatik oluşturuldu. CO₂ tasarrufu: 18,420 ton (bu hafta). SPK uyumlu." },
+  { time: "14:32", type: "warning", msg: "Barut Kemer — havuz bölgesi doluluk %95 aşıldı. F&B ekibine ek servis noktası önerisi gönderildi." },
+  { time: "14:28", type: "info", msg: "Barut Lara — VIP misafir check-in: tercih profili yüklendi. Oda sıcaklığı 22°C, yastık tipi memory foam, minibar stoklandı." },
+  { time: "14:15", type: "success", msg: "Barut Hemera — dinamik fiyatlama güncellendi. Önümüzdeki hafta sonu ADR €195 → €215 önerisi onaylandı." },
+  { time: "13:58", type: "warning", msg: "Acanthus & Cennet — ana restoran akşam doluluk tahmini %98. Ek terasa açılma ve personel takviyesi öneriliyor." },
+  { time: "13:42", type: "info", msg: "Barut Arum — spa randevu sistemi: bugün %87 doluluk. Yarın için boş slot uyarısı misafirlere gönderildi." },
+  { time: "13:30", type: "info", msg: "Barut Andiz — tesis tüketim analizi: klima optimizasyonu ile günlük %12 tasarruf sağlandı." },
+  { time: "13:15", type: "success", msg: "Haftalık misafir memnuniyeti raporu oluşturuldu. Portföy ortalaması: 4.7/5 (+0.1 önceki haftaya göre)." },
 ];
 
 const alertsEn = [
-  { time: "14:32", type: "warning", msg: "Tire WPP Turbine #3 — vibration value above threshold. Predictive maintenance: intervention recommended within 12 days." },
-  { time: "14:28", type: "info", msg: "JES-1 Alasehir — well pressure stable, production at 102% capacity factor. Running optimally." },
-  { time: "14:15", type: "success", msg: "JES-3 Maintenance Complete — turbine overhaul finishing. Commissioning: within 2 hours." },
-  { time: "13:58", type: "warning", msg: "VEDAŞ Van Sector 7 — transformer #142 overloaded. Peak shifting recommendation: load distribution between 18:00-22:00." },
-  { time: "13:42", type: "info", msg: "Sivas YEKA — construction progress: 12%. Transmission line route approved. On schedule." },
-  { time: "13:30", type: "info", msg: "Cotiujeni (Moldova) — EU energy price analysis: production increase recommended between 14:00-16:00 for sales optimization." },
-  { time: "13:15", type: "success", msg: "Weekly ESG report auto-generated. CO₂ savings: 18,420 tons (this week). CMB compliant." },
+  { time: "14:32", type: "warning", msg: "Barut Kemer — pool area at 95% capacity. Additional F&B service point recommendation sent to team." },
+  { time: "14:28", type: "info", msg: "Barut Lara — VIP guest check-in: preference profile loaded. Room temp 22°C, memory foam pillows, minibar stocked." },
+  { time: "14:15", type: "success", msg: "Barut Hemera — dynamic pricing updated. Next weekend ADR €195 → €215 recommendation approved." },
+  { time: "13:58", type: "warning", msg: "Acanthus & Cennet — main restaurant dinner forecast 98% full. Terrace expansion and staff reinforcement recommended." },
+  { time: "13:42", type: "info", msg: "Barut Arum — spa booking system: 87% utilization today. Empty slot alerts sent to guests for tomorrow." },
+  { time: "13:30", type: "info", msg: "Barut Andiz — facility consumption analysis: AC optimization yielding 12% daily savings." },
+  { time: "13:15", type: "success", msg: "Weekly guest satisfaction report generated. Portfolio average: 4.7/5 (+0.1 vs. previous week)." },
 ];
 
-const vedasMetricsTr = [
-  { label: "Aktif Abone", value: "840K", trend: "+1.2K bugün" },
-  { label: "Kayıp Oranı", value: "%28.4", trend: "-0.3% önceki aya göre" },
-  { label: "Arızalı Trafo", value: "12", trend: "3 müdahale devam ediyor" },
-  { label: "Akıllı Sayaç", value: "%67", trend: "PLC kapsama oranı" },
+const guestMetricsTr = [
+  { label: "Anlık Doluluk", value: "%84.2", trend: "+1.8% dün'e göre" },
+  { label: "Ortalama ADR", value: "€180", trend: "+6% önceki aya göre" },
+  { label: "Misafir Skoru", value: "4.7/5", trend: "8,200+ değerlendirme" },
+  { label: "Tekrar Misafir", value: "%50.2", trend: "Hedef: %55" },
 ];
 
-const vedasMetricsEn = [
-  { label: "Active Subscribers", value: "840K", trend: "+1.2K today" },
-  { label: "Loss Rate", value: "28.4%", trend: "-0.3% vs. previous month" },
-  { label: "Faulty Transformers", value: "12", trend: "3 interventions ongoing" },
-  { label: "Smart Meters", value: "67%", trend: "PLC coverage rate" },
+const guestMetricsEn = [
+  { label: "Live Occupancy", value: "84.2%", trend: "+1.8% vs. yesterday" },
+  { label: "Average ADR", value: "€180", trend: "+6% vs. previous month" },
+  { label: "Guest Score", value: "4.7/5", trend: "8,200+ reviews" },
+  { label: "Repeat Guests", value: "50.2%", trend: "Target: 55%" },
 ];
 
 const kpiColors = ["#10b981", "#3b82f6", "#06b6d4", "#8b5cf6"];
@@ -77,19 +73,19 @@ const kpiColors = ["#10b981", "#3b82f6", "#06b6d4", "#8b5cf6"];
 export default function LiveDemo() {
   const { lang, t } = useLang();
 
-  const totalMW = useAnimatedNumber(527);
-  const activeUnits = useAnimatedNumber(13);
-  const dailyMWh = useAnimatedNumber(8420);
-  const co2Saved = useAnimatedNumber(1247);
+  const totalRooms = useAnimatedNumber(2800);
+  const activeProperties = useAnimatedNumber(9);
+  const dailyGuests = useAnimatedNumber(4200);
+  const guestScore = useAnimatedNumber(92);
 
   const alerts = lang === "tr" ? alertsTr : alertsEn;
-  const vedasMetrics = lang === "tr" ? vedasMetricsTr : vedasMetricsEn;
+  const guestMetrics = lang === "tr" ? guestMetricsTr : guestMetricsEn;
 
   const kpiValues = [
-    `${totalMW.value} MW`,
-    `${activeUnits.value}/15`,
-    `${dailyMWh.value.toLocaleString()} MWh`,
-    `${co2Saved.value.toLocaleString()} ton`,
+    `${totalRooms.value.toLocaleString()}`,
+    `${activeProperties.value}/10`,
+    `${dailyGuests.value.toLocaleString()}`,
+    `${guestScore.value}%`,
   ];
 
   return (
@@ -120,10 +116,10 @@ export default function LiveDemo() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           onViewportEnter={() => {
-            totalMW.start();
-            activeUnits.start();
-            dailyMWh.start();
-            co2Saved.start();
+            totalRooms.start();
+            activeProperties.start();
+            dailyGuests.start();
+            guestScore.start();
           }}
           viewport={{ once: true }}
           className="rounded-2xl bg-surface border border-border overflow-hidden"
@@ -132,15 +128,15 @@ export default function LiveDemo() {
           <div className="flex items-center justify-between px-6 py-3 border-b border-border bg-surface-light/30">
             <div className="flex items-center gap-3">
               <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                <span className="text-white text-[9px] font-bold">TH</span>
+                <span className="text-white text-[9px] font-bold">BH</span>
               </div>
-              <span className="text-sm font-semibold">Türkerler AI Hub</span>
+              <span className="text-sm font-semibold">Barut Hotels Dijital Hub</span>
               <span className="text-[10px] px-2 py-0.5 rounded-full bg-primary/10 text-primary">
                 v1.0 Prototip
               </span>
             </div>
             <div className="flex items-center gap-4 text-[10px] text-foreground/30">
-              <span>12 Mar 2026 14:35</span>
+              <span>13 Mar 2026 14:35</span>
               <span className="flex items-center gap-1">
                 <span className="relative flex h-1.5 w-1.5">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
@@ -238,13 +234,13 @@ export default function LiveDemo() {
                 </div>
               </div>
 
-              {/* VEDAS Panel - 3 cols */}
+              {/* Guest Metrics Panel - 3 cols */}
               <div className="lg:col-span-3">
                 <div className="text-[10px] font-mono text-foreground/25 mb-2 tracking-wider">
                   {t.demo.vedasDist}
                 </div>
                 <div className="space-y-2">
-                  {vedasMetrics.map((m, i) => (
+                  {guestMetrics.map((m, i) => (
                     <motion.div
                       key={m.label}
                       initial={{ opacity: 0, x: 5 }}
@@ -260,15 +256,15 @@ export default function LiveDemo() {
                   ))}
                 </div>
 
-                {/* Construction Progress */}
+                {/* Expansion Progress */}
                 <div className="mt-3">
                   <div className="text-[10px] font-mono text-foreground/25 mb-2 tracking-wider">
                     {t.demo.projectProgress}
                   </div>
                   {[
-                    { name: "Sivas YEKA 500MW", pct: 12, color: "#3b82f6" },
-                    { name: "K.Maraş GES 40MW", pct: 5, color: "#f59e0b" },
-                    { name: "Van GES 40MW", pct: 3, color: "#f59e0b" },
+                    { name: "Barut Fethiye Renovasyon", pct: 72, color: "#3b82f6" },
+                    { name: "Dijital Dönüşüm Faz 2", pct: 45, color: "#f59e0b" },
+                    { name: "AI Concierge Sistemi", pct: 85, color: "#10b981" },
                   ].map((p) => (
                     <div key={p.name} className="mb-2">
                       <div className="flex justify-between text-[9px] mb-0.5">

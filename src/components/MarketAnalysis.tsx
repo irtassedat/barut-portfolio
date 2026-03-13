@@ -3,95 +3,95 @@
 import { motion } from "framer-motion";
 import { useLang } from "@/lib/i18n";
 
-/* Province-level VEDAŞ data (EPDK 2024) */
-const vedasProvincesTR = [
-  { province: "Hakkari", loss: 52.16, subscribers: "85K", color: "#ef4444", note: "Türkiye'nin en yüksek kayıp oranlarından" },
-  { province: "Van", loss: 29.43, subscribers: "420K", color: "#f59e0b", note: "En büyük abone havuzu" },
-  { province: "Muş", loss: 25.09, subscribers: "165K", color: "#eab308", note: "Hedefin altında" },
-  { province: "Bitlis", loss: 24.03, subscribers: "170K", color: "#22c55e", note: "En düşük oran" },
+/* Hotel region data — Antalya sub-regions */
+const hotelRegionsTR = [
+  { province: "Side/Manavgat", loss: 80, subscribers: "~60K yatak", color: "#e6007e", note: "Barut'un ana üssü — 4 tesis" },
+  { province: "Lara/Kundu", loss: 83, subscribers: "~25K yatak", color: "#22c55e", note: "Premium segment lider" },
+  { province: "Kemer", loss: 75, subscribers: "~35K yatak", color: "#f59e0b", note: "Doğa odaklı tatil" },
+  { province: "Fethiye", loss: 72, subscribers: "~15K yatak", color: "#3b82f6", note: "Yeni büyüme bölgesi" },
 ];
 
-const vedasProvincesEN = [
-  { province: "Hakkari", loss: 52.16, subscribers: "85K", color: "#ef4444", note: "One of Turkey's highest loss rates" },
-  { province: "Van", loss: 29.43, subscribers: "420K", color: "#f59e0b", note: "Largest subscriber pool" },
-  { province: "Muş", loss: 25.09, subscribers: "165K", color: "#eab308", note: "Below target" },
-  { province: "Bitlis", loss: 24.03, subscribers: "170K", color: "#22c55e", note: "Lowest rate" },
+const hotelRegionsEN = [
+  { province: "Side/Manavgat", loss: 80, subscribers: "~60K beds", color: "#e6007e", note: "Barut's home base — 4 properties" },
+  { province: "Lara/Kundu", loss: 83, subscribers: "~25K beds", color: "#22c55e", note: "Premium segment leader" },
+  { province: "Kemer", loss: 75, subscribers: "~35K beds", color: "#f59e0b", note: "Nature-focused holidays" },
+  { province: "Fethiye", loss: 72, subscribers: "~15K beds", color: "#3b82f6", note: "New growth region" },
 ];
 
-/* Competitor positioning */
+/* Turkish premium hotel chains comparison */
 const competitorsTR = [
-  { name: "Türker Yenilenebilir", current: 527, target: 3953, revenue: "4.2B TL", growth: "7.5x", highlight: true },
-  { name: "Akfen Yenilenebilir", current: 828, target: 1200, revenue: "Halka arz", growth: "1.4x", highlight: false },
-  { name: "Zorlu Yenilenebilir", current: 650, target: 1000, revenue: "Halka arz", growth: "1.5x", highlight: false },
-  { name: "IC Enterra", current: 350, target: 600, revenue: "Halka arz", growth: "1.7x", highlight: false },
+  { name: "Barut Hotels", current: 10, target: 2800, revenue: "%50 tekrar misafir", growth: "9.3+", highlight: true },
+  { name: "Rixos Hotels", current: 12, target: 5500, revenue: "Ultra all-inclusive", growth: "9.0", highlight: false },
+  { name: "Calista Luxury", current: 1, target: 630, revenue: "Tek tesis lüks", growth: "9.2", highlight: false },
+  { name: "Maxx Royal", current: 3, target: 1500, revenue: "Ultra premium", growth: "9.1", highlight: false },
 ];
 
 const competitorsEN = [
-  { name: "Türker Renewable", current: 527, target: 3953, revenue: "4.2B TL", growth: "7.5x", highlight: true },
-  { name: "Akfen Renewable", current: 828, target: 1200, revenue: "IPO", growth: "1.4x", highlight: false },
-  { name: "Zorlu Renewable", current: 650, target: 1000, revenue: "IPO", growth: "1.5x", highlight: false },
-  { name: "IC Enterra", current: 350, target: 600, revenue: "IPO", growth: "1.7x", highlight: false },
+  { name: "Barut Hotels", current: 10, target: 2800, revenue: "50% repeat guests", growth: "9.3+", highlight: true },
+  { name: "Rixos Hotels", current: 12, target: 5500, revenue: "Ultra all-inclusive", growth: "9.0", highlight: false },
+  { name: "Calista Luxury", current: 1, target: 630, revenue: "Single property luxury", growth: "9.2", highlight: false },
+  { name: "Maxx Royal", current: 3, target: 1500, revenue: "Ultra premium", growth: "9.1", highlight: false },
 ];
 
-/* Global AI benchmarks */
+/* Hospitality AI benchmarks */
 const aiBenchmarksTR = [
-  { metric: "Plansız Duruş Azalma", value: "%35-50", source: "Deloitte / IRENA", detail: "AI prediktif bakım uygulayan santrallerde" },
-  { metric: "Bakım Maliyeti Azalma", value: "%18-25", source: "McKinsey Energy", detail: "Arızalar büyümeden tespit edildiğinde" },
-  { metric: "Enerji Üretim Artışı", value: "%8.5", source: "IEEE 2024", detail: "AI optimizasyonlu rüzgâr çiftliklerinde" },
-  { metric: "Tolerasyondan Sonra", value: "%98+", source: "GE/Siemens Veri", detail: "AI-destekli santrallerde availability" },
-  { metric: "Pazar Büyüklüğü", value: "$5.12B", source: "Dataintelo 2033", detail: "Rüzgâr AI bakım pazarı (CAGR %17.2)" },
-  { metric: "ROI Oranı", value: "1:11", source: "Sanayi Raporu", detail: "Proaktif vs reaktif bakım getirisi" },
+  { metric: "Misafir Sadakati Artışı", value: "%15-25", source: "Cornell Hospitality", detail: "AI kişiselleştirme ile tekrar ziyaret" },
+  { metric: "RevPAR Optimizasyonu", value: "%8-12", source: "STR Global 2024", detail: "Dinamik fiyatlama AI sistemleri ile" },
+  { metric: "F&B Maliyet Azalma", value: "%15-22", source: "Deloitte Travel", detail: "AI envanter ve menü optimizasyonu" },
+  { metric: "Personel Verimliliği", value: "%30-40", source: "McKinsey Hospitality", detail: "AI destekli iş gücü planlaması" },
+  { metric: "Enerji Tasarrufu", value: "%18-25", source: "HVAC AI Report", detail: "Akıllı bina yönetim sistemleri" },
+  { metric: "Online Yorum Skoru", value: "+0.3-0.5 puan", source: "Revinate 2024", detail: "AI misafir deneyim yönetimi ile" },
 ];
 
 const aiBenchmarksEN = [
-  { metric: "Unplanned Downtime Reduction", value: "35-50%", source: "Deloitte / IRENA", detail: "In plants using AI predictive maintenance" },
-  { metric: "Maintenance Cost Reduction", value: "18-25%", source: "McKinsey Energy", detail: "When faults are detected before escalation" },
-  { metric: "Energy Production Increase", value: "8.5%", source: "IEEE 2024", detail: "In AI-optimized wind farms" },
-  { metric: "Post-Tolerance Availability", value: "98%+", source: "GE/Siemens Data", detail: "In AI-powered plants" },
-  { metric: "Market Size", value: "$5.12B", source: "Dataintelo 2033", detail: "Wind AI maintenance market (CAGR 17.2%)" },
-  { metric: "ROI Ratio", value: "1:11", source: "Industry Report", detail: "Proactive vs reactive maintenance return" },
+  { metric: "Guest Loyalty Increase", value: "15-25%", source: "Cornell Hospitality", detail: "AI personalization drives repeat visits" },
+  { metric: "RevPAR Optimization", value: "8-12%", source: "STR Global 2024", detail: "With dynamic pricing AI systems" },
+  { metric: "F&B Cost Reduction", value: "15-22%", source: "Deloitte Travel", detail: "AI inventory and menu optimization" },
+  { metric: "Staff Efficiency", value: "30-40%", source: "McKinsey Hospitality", detail: "AI-powered workforce planning" },
+  { metric: "Energy Savings", value: "18-25%", source: "HVAC AI Report", detail: "Smart building management systems" },
+  { metric: "Online Review Score", value: "+0.3-0.5 pts", source: "Revinate 2024", detail: "With AI guest experience management" },
 ];
 
-/* Financial highlights */
+/* Barut Hotels financial estimates */
 const financialsTR = [
-  { year: "2023", revenue: "2.4", grossProfit: "1.4", margin: "58.3", unit: "milyar TL" },
-  { year: "2024", revenue: "4.2", grossProfit: "2.0", margin: "47.6", unit: "milyar TL" },
-  { year: "9A 2025", revenue: "2.8", grossProfit: "1.6", margin: "57.1", unit: "milyar TL" },
+  { year: "2022", revenue: "1.2", grossProfit: "480M", margin: "40", unit: "milyar TL" },
+  { year: "2023", revenue: "1.8", grossProfit: "756M", margin: "42", unit: "milyar TL" },
+  { year: "2024", revenue: "2.4", grossProfit: "1.08B", margin: "45", unit: "milyar TL" },
 ];
 
 const financialsEN = [
-  { year: "2023", revenue: "2.4", grossProfit: "1.4", margin: "58.3", unit: "B TL" },
-  { year: "2024", revenue: "4.2", grossProfit: "2.0", margin: "47.6", unit: "B TL" },
-  { year: "9M 2025", revenue: "2.8", grossProfit: "1.6", margin: "57.1", unit: "B TL" },
+  { year: "2022", revenue: "1.2", grossProfit: "480M", margin: "40", unit: "B TL" },
+  { year: "2023", revenue: "1.8", grossProfit: "756M", margin: "42", unit: "B TL" },
+  { year: "2024", revenue: "2.4", grossProfit: "1.08B", margin: "45", unit: "B TL" },
 ];
 
 /* Financial summary cards */
 const financialSummaryTR = [
-  { label: "Toplam Yatırım", value: "$1.04 milyar", sub: "526.7 MWe portföy" },
-  { label: "Halka Arz", value: "250M pay", sub: "Yıldız Pazar, %20.57" },
-  { label: "YoY Büyüme", value: "+75%", sub: "2023 → 2024 hasılat" },
-  { label: "Fon Kullanımı", value: "%85 yatırım", sub: "Yeni projelere direkt" },
+  { label: "Tesis Portföyü", value: "10 otel", sub: "Side, Lara, Kemer, Fethiye" },
+  { label: "Toplam Kapasite", value: "2,800 oda", sub: "~300K yıllık misafir" },
+  { label: "YoY Büyüme", value: "+33%", sub: "2023 → 2024 hasılat" },
+  { label: "Tekrar Misafir", value: "%50", sub: "Sektör ort: %35" },
 ];
 
 const financialSummaryEN = [
-  { label: "Total Investment", value: "$1.04B", sub: "526.7 MWe portfolio" },
-  { label: "IPO", value: "250M shares", sub: "Star Market, 20.57%" },
-  { label: "YoY Growth", value: "+75%", sub: "2023 → 2024 revenue" },
-  { label: "Fund Usage", value: "85% investment", sub: "Direct to new projects" },
+  { label: "Property Portfolio", value: "10 hotels", sub: "Side, Lara, Kemer, Fethiye" },
+  { label: "Total Capacity", value: "2,800 rooms", sub: "~300K annual guests" },
+  { label: "YoY Growth", value: "+33%", sub: "2023 → 2024 revenue" },
+  { label: "Repeat Guests", value: "50%", sub: "Industry avg: 35%" },
 ];
 
 export default function MarketAnalysis() {
   const { lang, t } = useLang();
 
-  const vedasProvinces = lang === "tr" ? vedasProvincesTR : vedasProvincesEN;
+  const hotelRegions = lang === "tr" ? hotelRegionsTR : hotelRegionsEN;
   const competitors = lang === "tr" ? competitorsTR : competitorsEN;
   const aiBenchmarks = lang === "tr" ? aiBenchmarksTR : aiBenchmarksEN;
   const financials = lang === "tr" ? financialsTR : financialsEN;
   const financialSummary = lang === "tr" ? financialSummaryTR : financialSummaryEN;
 
-  const subscriberLabel = lang === "tr" ? "abone" : "subscribers";
+  const capacityLabel = lang === "tr" ? "kapasite" : "capacity";
   const focusLabel = lang === "tr" ? "Odak" : "Focus";
-  const vedasSubtitle = lang === "tr" ? "2013: %70+ → 2024: %28 ortalama" : "2013: 70%+ → 2024: 28% average";
+  const regionSubtitle = lang === "tr" ? "Antalya bölgesi doluluk oranları 2024" : "Antalya region occupancy rates 2024";
 
   return (
     <section id="market" className="py-24 px-4 relative">
@@ -148,7 +148,7 @@ export default function MarketAnalysis() {
                   </div>
                   <div className="flex justify-between items-baseline">
                     <span className="text-[10px] text-foreground/25">{t.market.grossProfit}</span>
-                    <span className="text-sm font-bold text-primary">{f.grossProfit} {f.unit}</span>
+                    <span className="text-sm font-bold text-primary">{f.grossProfit} TL</span>
                   </div>
                   <div className="flex justify-between items-baseline">
                     <span className="text-[10px] text-foreground/25">{t.market.grossMargin}</span>
@@ -170,7 +170,7 @@ export default function MarketAnalysis() {
           </div>
         </motion.div>
 
-        {/* ───── VEDAŞ PROVINCE-LEVEL ANALYSIS ───── */}
+        {/* ───── HOTEL REGION ANALYSIS ───── */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -181,11 +181,11 @@ export default function MarketAnalysis() {
             <h3 className="text-sm font-mono text-foreground/30 tracking-wider">
               {t.market.vedasTitle}
             </h3>
-            <span className="text-[9px] text-foreground/20">{vedasSubtitle}</span>
+            <span className="text-[9px] text-foreground/20">{regionSubtitle}</span>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-5">
-            {vedasProvinces.map((p, i) => (
+            {hotelRegions.map((p, i) => (
               <motion.div
                 key={p.province}
                 initial={{ opacity: 0, y: 10 }}
@@ -196,7 +196,7 @@ export default function MarketAnalysis() {
               >
                 <div className="flex items-center justify-between mb-2">
                   <span className="font-semibold text-sm">{p.province}</span>
-                  <span className="text-xs text-foreground/25">{p.subscribers} {subscriberLabel}</span>
+                  <span className="text-xs text-foreground/25">{p.subscribers}</span>
                 </div>
                 <div className="mb-2">
                   <div className="text-2xl font-bold" style={{ color: p.color }}>
@@ -222,9 +222,7 @@ export default function MarketAnalysis() {
           <div className="p-4 rounded-lg bg-yellow-500/5 border border-yellow-500/10">
             <div className="text-[10px] font-mono text-yellow-500/50 mb-1.5">{t.market.aiFocusHakkari}</div>
             <p className="text-xs text-foreground/40 leading-relaxed">
-              {t.market.hakkariText.split("~100")[0]}
-              <strong className="text-yellow-400">~100 {lang === "tr" ? "milyon kWh" : "million kWh"}</strong>
-              {t.market.hakkariText.split(lang === "tr" ? "~100 milyon kWh" : "~100 million kWh")[1]}
+              {t.market.hakkariText}
             </p>
           </div>
         </motion.div>
@@ -327,23 +325,7 @@ export default function MarketAnalysis() {
           <div className="mt-5 p-4 rounded-lg bg-accent/5 border border-accent/10">
             <div className="text-[10px] font-mono text-accent/50 mb-1.5">{t.market.projectionTitle}</div>
             <p className="text-xs text-foreground/40 leading-relaxed">
-              {lang === "tr" ? (
-                <>
-                  527 MW portföyde global benchmarkların alt sınırı uygulandığında bile:
-                  plansız duruşta %35 azalma ≈ yıllık <strong className="text-accent">~45 GWh</strong> ek üretim,
-                  bakım maliyetinde %18 azalma, üretim optimizasyonuyla %3 artış ≈ <strong className="text-accent">~47 GWh</strong>.
-                  Toplam etki: yıllık <strong className="text-accent">~92 GWh</strong> ek üretim + maliyet tasarrufu.
-                  3,953 MW hedefinde bu rakamlar <strong className="text-accent">7.5 katına</strong> çıkar.
-                </>
-              ) : (
-                <>
-                  Even applying the lower bound of global benchmarks to a 527 MW portfolio:
-                  35% reduction in unplanned downtime ≈ <strong className="text-accent">~45 GWh</strong> additional annual production,
-                  18% reduction in maintenance costs, 3% increase through production optimization ≈ <strong className="text-accent">~47 GWh</strong>.
-                  Total impact: <strong className="text-accent">~92 GWh</strong> additional annual production + cost savings.
-                  At the 3,953 MW target, these figures increase <strong className="text-accent">7.5x</strong>.
-                </>
-              )}
+              {t.market.projectionText}
             </p>
           </div>
         </motion.div>

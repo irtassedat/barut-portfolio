@@ -13,9 +13,9 @@ const productLinesTr = {
   ],
   hydro: [
     { name: "Barut Hemera", capacity: "Side", location: "All-Inclusive", status: "Agoda 9.5" },
-    { name: "Barut GOIA", capacity: "Side", location: "All-Inclusive", status: "Aile Odakli" },
+    { name: "Barut GOIA", capacity: "Side", location: "All-Inclusive", status: "Aile Odaklı" },
     { name: "Barut B Suites", capacity: "Evrenseki", location: "All-Inc Suite", status: "Booking 9.0" },
-    { name: "TUI BLUE Andiz", capacity: "Side", location: "Yetiskin 16+", status: "Booking 9.5" },
+    { name: "TUI BLUE Andiz", capacity: "Side", location: "Yetişkin 16+", status: "Booking 9.5" },
   ],
   geothermal: [
     { name: "BAYOU Villas Lara", capacity: "24 villa", location: "Ultra Premium", status: "Forbes Verified" },
@@ -45,35 +45,35 @@ const productLinesEn = {
 /* ───── DIGITAL TRANSFORMATION OPPORTUNITIES ───── */
 const megaProjectsTr = [
   {
-    name: "Birlesik Web Platformu",
+    name: "Birleşik Web Platformu",
     capacity: "9+ Site → 1",
-    investment: "Acil Oncelik",
+    investment: "Acil Öncelik",
     status: "Teklif",
     color: "#e6007e",
     details: [
-      "baruthotels.com + 8 microsite tek platformda birlestirme",
-      "Otel detay sayfalari (su an 404 donuyor) olusturma",
-      "SEO fragmentasyonunun cozulmesi — tek domain otoritesi",
-      "Tesis karsilastirma araci ve direkt rezervasyon entegrasyonu",
-      "4 dilde (TR/EN/DE/RU) birlesik icerik yonetimi",
+      "baruthotels.com + 8 microsite tek platformda birleştirme",
+      "Otel detay sayfaları (şu an 404 dönüyor) oluşturma",
+      "SEO fragmentasyonunun çözülmesi — tek domain otoritesi",
+      "Tesis karşılaştırma aracı ve direkt rezervasyon entegrasyonu",
+      "4 dilde (TR/EN/DE/RU) birleşik içerik yönetimi",
     ],
     aiValue:
-      "Birlesik platform ile domain otoritesi 3-4x artis. AI destekli otel karsilastirma ve kisisel oneri motoru ile direkt rezervasyon %25+ artis.",
+      "Birleşik platform ile domain otoritesi 3-4x artış. AI destekli otel karşılaştırma ve kişisel öneri motoru ile direkt rezervasyon %25+ artış.",
   },
   {
     name: "Dijital Misafir Deneyimi",
     capacity: "300K Misafir",
-    investment: "Yuksek ROI",
+    investment: "Yüksek ROI",
     status: "Teklif",
     color: "#c9a84c",
     details: [
       "AI destekli dijital concierge — WhatsApp + uygulama",
-      "Misafir tercih profili ve kisisellestirmis oneri motoru",
-      "Oda secimi, restoran rezervasyonu, spa randevusu dijital",
-      "Check-in/check-out dijitallestirilmesi tum otellere yayilma",
+      "Misafir tercih profili ve kişiselleştirilmiş öneri motoru",
+      "Oda seçimi, restoran rezervasyonu, spa randevusu dijital",
+      "Check-in/check-out dijitalleştirilmesi tüm otellere yayılma",
     ],
     aiValue:
-      "AI kisisellestirme ile misafir memnuniyeti 0.3+ puan artisi. %50 tekrar oranini %55'e tasima potansiyeli. Misafir basina gelir %12 artis.",
+      "AI kişiselleştirme ile misafir memnuniyeti 0.3+ puan artışı. %50 tekrar oranını %55'e taşıma potansiyeli. Misafir başına gelir %12 artış.",
   },
   {
     name: "Barut Club Digital Portal",
@@ -82,28 +82,28 @@ const megaProjectsTr = [
     status: "Teklif",
     color: "#3b82f6",
     details: [
-      "Barut Club Card'in tam dijital platforma tasima",
-      "Puan takibi, kademe ilerleme, ozel teklifler mobil app",
-      "Misafir gecmisi ve tercih analizi ile kisisellestirme",
-      "Dijital odul kullanim ve partner entegrasyonlari",
+      "Barut Club Card'ın tam dijital platforma taşıma",
+      "Puan takibi, kademe ilerleme, özel teklifler mobil app",
+      "Misafir geçmişi ve tercih analizi ile kişiselleştirme",
+      "Dijital ödül kullanım ve partner entegrasyonları",
     ],
     aiValue:
-      "AI tabanlı sadakat analizi: churn tahmini, kisisel kampanya onerileri. Dijital platform ile sadakat programi katilim %40 artis.",
+      "AI tabanlı sadakat analizi: churn tahmini, kişisel kampanya önerileri. Dijital platform ile sadakat programı katılım %40 artış.",
   },
   {
-    name: "Gelir Yonetim Sistemi",
+    name: "Gelir Yönetim Sistemi",
     capacity: "2,800 Oda",
     investment: "Stratejik",
     status: "Vizyon",
     color: "#a855f7",
     details: [
       "10 tesiste AI destekli dinamik fiyatlama",
-      "OTA kanal yonetimi optimizasyonu",
+      "OTA kanal yönetimi optimizasyonu",
       "Doluluk tahmini ve talep forecasting",
-      "RevPAR maksimizasyonu — segment bazli analiz",
+      "RevPAR maksimizasyonu — segment bazlı analiz",
     ],
     aiValue:
-      "AI dinamik fiyatlama ile RevPAR %8-15 artis. Optimal kanal dagılımı ile OTA komisyon maliyeti %10 azalma. Yillik gelir artisi: milyonlarca TL.",
+      "AI dinamik fiyatlama ile RevPAR %8-15 artış. Optimal kanal dağılımı ile OTA komisyon maliyeti %10 azalma. Yıllık gelir artışı: milyonlarca TL.",
   },
   {
     name: "Operasyon & F&B Optimizasyonu",
@@ -112,28 +112,28 @@ const megaProjectsTr = [
     status: "Teklif",
     color: "#06b6d4",
     details: [
-      "50+ restoran ve barin dijital yonetimi",
-      "F&B talep tahmini ile gida israfi azaltma",
-      "Personel planlama optimizasyonu — shift yonetimi",
-      "Enerji tuketim izleme ve tasarruf onerileri",
+      "50+ restoran ve barın dijital yönetimi",
+      "F&B talep tahmini ile gıda israfı azaltma",
+      "Personel planlama optimizasyonu — shift yönetimi",
+      "Tesis tüketim izleme ve tasarruf önerileri",
     ],
     aiValue:
-      "AI ile F&B gida israfi %20 azalma. Personel planlama optimizasyonu %15 verimlilik artisi. Enerji izleme ile yillik %10 tasarruf.",
+      "AI ile F&B gıda israfı %20 azalma. Personel planlama optimizasyonu %15 verimlilik artışı. Tesis izleme ile yıllık %10 tasarruf.",
   },
   {
-    name: "Surdurulebilirlik & ESG Platformu",
+    name: "Sürdürülebilirlik & ESG Platformu",
     capacity: "7 ISO + GSTC",
-    investment: "Marka Degeri",
+    investment: "Marka Değeri",
     status: "Teklif",
     color: "#10b981",
     details: [
-      "We Care All programinin dijital platforma tasinmasi",
-      "7 ISO sertifikasi ve Travelife Gold uyum takibi",
-      "Karbon ayak izi hesabi ve cevresel etki dashboardu",
-      "Side Antik Kenti sponsorlugu ve kultur mirasi sayfasi",
+      "We Care All programının dijital platforma taşınması",
+      "7 ISO sertifikası ve Travelife Gold uyum takibi",
+      "Karbon ayak izi hesabı ve çevresel etki dashboardu",
+      "Side Antik Kenti sponsorluğu ve kültür mirası sayfası",
     ],
     aiValue:
-      "Otomatik surdurulebilirlik raporlama: enerji, su, karbon metrikleri. ESG skoru ile uluslararasi misafir ve kurumsal etkinlik cekiciligi artisi.",
+      "Otomatik sürdürülebilirlik raporlama: su, karbon metrikleri. ESG skoru ile uluslararası misafir ve kurumsal etkinlik çekiciliği artışı.",
   },
 ];
 
@@ -234,21 +234,21 @@ const megaProjectsEn = [
 /* ───── WEBSITE FRAGMENTATION ───── */
 const vedasDataTr = {
   coverage: "baruthotels.com + 8 microsite",
-  subscribers: "9+ Ayri Domain",
-  population: "404 Hatasi",
-  area: "SEO Dagilmis",
-  investment2025: "Acil Cozum",
-  lossRate: "Parcalanmis dijital varlik",
-  smartMeters: "Birlesik platform ile cozum",
+  subscribers: "9+ Ayrı Domain",
+  population: "404 Hatası",
+  area: "SEO Dağılmış",
+  investment2025: "Acil Çözüm",
+  lossRate: "Parçalanmış dijital varlık",
+  smartMeters: "Birleşik platform ile çözüm",
   labels: {
-    investment: "Oncelik",
+    investment: "Öncelik",
     subscribers: "Tespit",
     lossTarget: "Sorun",
     servicePopulation: "Durum",
   },
-  aiModule: "DIJITAL COZUM MODULU:",
+  aiModule: "DİJİTAL ÇÖZÜM MODÜLÜ:",
   aiText:
-    "baruthotels.com ana sitesinde otel detay sayfalari 404 donuyor — misafirler barutlara.com, barutarum.com gibi ayri domainlere yonlendiriliyor. Bu 9+ domain yapisi SEO otoritesini parcaliyor, kullanici yolculugunu bozuyor ve bakim maliyetini artiriyor. Birlesik Next.js platformu ile: tek domain otoritesi, zengin otel detay sayfalari, karsilastirma araci, 4 dilde icerik ve direkt rezervasyon. Organik trafikte %60+ artis beklenir.",
+    "baruthotels.com ana sitesinde otel detay sayfaları 404 dönüyor — misafirler barutlara.com, barutarum.com gibi ayrı domainlere yönlendiriliyor. Bu 9+ domain yapısı SEO otoritesini parçalıyor, kullanıcı yolculuğunu bozuyor ve bakım maliyetini artırıyor. Birleşik Next.js platformu ile: tek domain otoritesi, zengin otel detay sayfaları, karşılaştırma aracı, 4 dilde içerik ve direkt rezervasyon. Organik trafikte %60+ artış beklenir.",
 };
 
 const vedasDataEn = {
@@ -273,28 +273,28 @@ const vedasDataEn = {
 /* ───── GUEST EXPERIENCE & LOYALTY ───── */
 const healthcareProjectsTr = [
   {
-    name: "Barut Club Card Programi",
+    name: "Barut Club Card Programı",
     beds: "5 kademe (Premier → Platinum+)",
-    area: "Tum Oteller",
+    area: "Tüm Oteller",
     investment: "Sadakat",
-    status: "Dijitallestirme Bekliyor",
-    note: "Puan takibi, ozel teklifler, dijital odul sistemi",
+    status: "Dijitalleştirme Bekliyor",
+    note: "Puan takibi, özel teklifler, dijital ödül sistemi",
   },
   {
-    name: "Misafir Kisisellestirme",
+    name: "Misafir Kişiselleştirme",
     beds: "300K+ profil",
     area: "%50 Tekrar",
-    investment: "Yuksek ROI",
+    investment: "Yüksek ROI",
     status: "AI Entegrasyonu",
-    note: "Tercih gecmisi, oda/restoran/spa onerileri, dijital concierge",
+    note: "Tercih geçmişi, oda/restoran/spa önerileri, dijital concierge",
   },
   {
     name: "Dijital Concierge Hizmeti",
     beds: "WhatsApp + App",
-    area: "7/24 Erisim",
+    area: "7/24 Erişim",
     investment: "Deneyim",
-    status: "Genisleme Bekliyor",
-    note: "Collection'da aktif, tum otellere yayilma ve AI guclendirme",
+    status: "Genişleme Bekliyor",
+    note: "Collection'da aktif, tüm otellere yayılma ve AI güçlendirme",
   },
 ];
 
@@ -332,72 +332,72 @@ const criticalProblemsTr = [
     icon: "\uD83C\uDF10",
     severity: "Kritik",
     problems: [
-      "9+ ayri domain — baruthotels.com + 8 microsite parcalanmis SEO",
-      "Ana sitede otel detay sayfalari 404 donuyor — kullanici yolculugu kirik",
-      "Tesis karsilastirma imkani yok — misafir oteller arasi gezinemiyor",
-      "Booking akisi kesintili — farkli domainlere atliyor",
+      "9+ ayrı domain — baruthotels.com + 8 microsite parçalanmış SEO",
+      "Ana sitede otel detay sayfaları 404 dönüyor — kullanıcı yolculuğu kırık",
+      "Tesis karşılaştırma imkanı yok — misafir oteller arası gezinemiyor",
+      "Booking akışı kesintili — farklı domainlere atlıyor",
     ],
     solutions: [
-      "Next.js ile birlesik, 4 dilli tek platform gelistirme",
-      "Zengin otel detay sayfalari: oda tipleri, restoranlar, ozellikler",
-      "Akilli tesis karsilastirma araci ve filtreleme sistemi",
+      "Next.js ile birleşik, 4 dilli tek platform geliştirme",
+      "Zengin otel detay sayfaları: oda tipleri, restoranlar, özellikler",
+      "Akıllı tesis karşılaştırma aracı ve filtreleme sistemi",
       "Tek platformda direkt rezervasyon entegrasyonu",
     ],
-    roi: "Domain otoritesi 3-4x artis + direkt rezervasyon %25+ artis",
+    roi: "Domain otoritesi 3-4x artış + direkt rezervasyon %25+ artış",
   },
   {
-    area: "Misafir Deneyimi & Kisisellestirme",
+    area: "Misafir Deneyimi & Kişiselleştirme",
     icon: "\uD83C\uDFA8",
-    severity: "Yuksek",
+    severity: "Yüksek",
     problems: [
       "300K misafirin tercih verisi dijital olarak analiz edilmiyor",
-      "%50 tekrar orani dijital sadakat programiyla desteklenmiyor",
-      "WhatsApp concierge sadece Collection'da — diger otellerde yok",
-      "Misafir profili oteller arasi paylasmiyor — her tesiste sifirdan",
+      "%50 tekrar oranı dijital sadakat programıyla desteklenmiyor",
+      "WhatsApp concierge sadece Collection'da — diğer otellerde yok",
+      "Misafir profili oteller arası paylaşmıyor — her tesiste sıfırdan",
     ],
     solutions: [
-      "AI misafir profilleme: tercih, davranis ve memnuniyet analizi",
-      "Barut Club Card dijital portal — mobil app ile puan/odul yonetimi",
-      "Tum otellere AI destekli dijital concierge yayilimi",
-      "Birlesik misafir profili: tum Barut otelleri genelinde tek profil",
+      "AI misafir profilleme: tercih, davranış ve memnuniyet analizi",
+      "Barut Club Card dijital portal — mobil app ile puan/ödül yönetimi",
+      "Tüm otellere AI destekli dijital concierge yayılımı",
+      "Birleşik misafir profili: tüm Barut otelleri genelinde tek profil",
     ],
-    roi: "Tekrar orani %55'e yukselis + misafir basina gelir %12 artis",
+    roi: "Tekrar oranı %55'e yükseliş + misafir başına gelir %12 artış",
   },
   {
-    area: "Gelir Yonetimi & Kanal Optimizasyonu",
+    area: "Gelir Yönetimi & Kanal Optimizasyonu",
     icon: "\uD83D\uDCB0",
-    severity: "Yuksek",
+    severity: "Yüksek",
     problems: [
       "10 tesiste dinamik fiyatlama optimizasyonu yetersiz",
-      "OTA bagimliligi yuksek — direkt rezervasyon orani dusuk",
-      "Tesis bazli gelir analizi ve karsilastirmali performans eksik",
-      "Segment bazli fiyatlama stratejisi (Collection vs Standard) dijitallesemedi",
+      "OTA bağımlılığı yüksek — direkt rezervasyon oranı düşük",
+      "Tesis bazlı gelir analizi ve karşılaştırmalı performans eksik",
+      "Segment bazlı fiyatlama stratejisi (Collection vs Standard) dijitalleşemedi",
     ],
     solutions: [
-      "AI destekli dinamik fiyatlama — talep/musaitlik/rekabet bazli",
-      "Birlesik platformda direkt rezervasyon tesvik — en iyi fiyat garantisi",
-      "10 tesis karsilastirmali RevPAR dashboardu",
-      "Segment bazli fiyatlama optimizasyonu: Collection premium pozisyonlama",
+      "AI destekli dinamik fiyatlama — talep/müsaitlik/rekabet bazlı",
+      "Birleşik platformda direkt rezervasyon teşvik — en iyi fiyat garantisi",
+      "10 tesis karşılaştırmalı RevPAR dashboardu",
+      "Segment bazlı fiyatlama optimizasyonu: Collection premium pozisyonlama",
     ],
-    roi: "RevPAR %8-15 artis + OTA komisyon maliyeti %10 azalma",
+    roi: "RevPAR %8-15 artış + OTA komisyon maliyeti %10 azalma",
   },
   {
-    area: "Icerik & Dijital Pazarlama",
+    area: "İçerik & Dijital Pazarlama",
     icon: "\uD83D\uDCF1",
-    severity: "Orta-Yuksek",
+    severity: "Orta-Yüksek",
     problems: [
-      "55 yillik miras ve sanat felsefesi dijitalde yeterince one cikmiyor",
-      "Side Antik Kenti sponsorlugu ve kulturel baglar web'e yansimimiyor",
-      "Blog/destinasyon rehberi yok — SEO icin icerik derinligi yetersiz",
-      "Barut Collection vs Standard farki dijitalde net anlatilmiyor",
+      "55 yıllık miras ve sanat felsefesi dijitalde yeterince öne çıkmıyor",
+      "Side Antik Kenti sponsorluğu ve kültürel bağlar web'e yansımıyor",
+      "Blog/destinasyon rehberi yok — SEO için içerik derinliği yetersiz",
+      "Barut Collection vs Standard farkı dijitalde net anlatılmıyor",
     ],
     solutions: [
-      "Barut hikayesi: aile mirasi, sanat felsefesi, interaktif zaman cigizisi",
-      "Side, Lara, Didim destinasyon rehberleri — kulturel turizm icerigi",
-      "Collection vs Standard: detayli karsilastirma sayfasi ve gorsel anlatim",
-      "AI destekli icerik uretimi: blog, misafir hikayeleri, mevsimsel kampanya",
+      "Barut hikayesi: aile mirası, sanat felsefesi, interaktif zaman çizelgesi",
+      "Side, Lara, Didim destinasyon rehberleri — kültürel turizm içeriği",
+      "Collection vs Standard: detaylı karşılaştırma sayfası ve görsel anlatım",
+      "AI destekli içerik üretimi: blog, misafir hikayeleri, mevsimsel kampanya",
     ],
-    roi: "Organik trafik %40 artis + marka bilinirlik guclenme",
+    roi: "Organik trafik %40 artış + marka bilinirlik güçlenme",
   },
 ];
 
@@ -478,12 +478,12 @@ const criticalProblemsEn = [
 
 /* ───── GROWTH ROADMAP ───── */
 const growthPhasesTr = [
-  { label: "Kurulus", mw: 1971, pct: 10, color: "#8b1a4a", detail: "Cennet Hotel — Side'da 36 odayla basladi" },
-  { label: "Hemera", mw: 1990, pct: 25, color: "#e6007e", detail: "Barut Hemera Side'da acildi" },
-  { label: "Arum", mw: 1996, pct: 40, color: "#c9a84c", detail: "Barut Arum Side'da acildi" },
+  { label: "Kuruluş", mw: 1971, pct: 10, color: "#8b1a4a", detail: "Cennet Hotel — Side'da 36 odayla başladı" },
+  { label: "Hemera", mw: 1990, pct: 25, color: "#e6007e", detail: "Barut Hemera Side'da açıldı" },
+  { label: "Arum", mw: 1996, pct: 40, color: "#c9a84c", detail: "Barut Arum Side'da açıldı" },
   { label: "Lara & Collection", mw: 2005, pct: 60, color: "#3b82f6", detail: "Lara Barut ve Collection konsepti" },
-  { label: "BAYOU Villas", mw: 2022, pct: 80, color: "#a855f7", detail: "Ultra-luks villa segmentine giris" },
-  { label: "Anda & Bugun", mw: 2024, pct: 100, color: "#10b981", detail: "Didim acilimi, 10 tesis, Booking 9.7" },
+  { label: "BAYOU Villas", mw: 2022, pct: 80, color: "#a855f7", detail: "Ultra-lüks villa segmentine giriş" },
+  { label: "Anda & Bugün", mw: 2024, pct: 100, color: "#10b981", detail: "Didim açılımı, 10 tesis, Booking 9.7" },
 ];
 
 const growthPhasesEn = [
@@ -505,7 +505,7 @@ export default function TurkerlerVision() {
   const criticalProblems = lang === "tr" ? criticalProblemsTr : criticalProblemsEn;
   const growthPhases = lang === "tr" ? growthPhasesTr : growthPhasesEn;
 
-  const totalOperational = lang === "tr" ? "10 Tesis — ~2,800 Oda — 3 Bolge" : "10 Properties — ~2,800 Rooms — 3 Regions";
+  const totalOperational = lang === "tr" ? "10 Tesis — ~2,800 Oda — 3 Bölge" : "10 Properties — ~2,800 Rooms — 3 Regions";
 
   return (
     <section id="turkerler" className="py-24 px-4 relative bg-grid">
